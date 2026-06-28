@@ -1,4 +1,4 @@
-# Línea 109 · Huincul Transportes — versión HTML/CSS/JS vanilla
+# Línea 109 · Huincul Transportes
 
 Reescritura del proyecto de Figma Make (React + Tailwind + Vite) a **HTML5 + CSS3 +
 JavaScript ES6** puro, sin frameworks ni build step. El diseño, los tokens, las
