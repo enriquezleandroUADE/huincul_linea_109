@@ -1,27 +1,23 @@
-# Línea 109 · Huincul Transportes — versión HTML/CSS/JS vanilla
+# Línea 109 · Huincul Transportes
 
-Reescritura del proyecto de Figma Make (React + Tailwind + Vite) a **HTML5 + CSS3 +
-JavaScript ES6** puro, sin frameworks ni build step. El diseño, los tokens, las
-imágenes y las interacciones se mantienen idénticos al original.
+Sitio web de la **Línea 109** (Liniers ↔ Puerto de Buenos Aires) desarrollado
+**desde cero con HTML5, CSS3 y JavaScript (ES6)**, sin frameworks ni dependencias
+externas.
 
-> El código original de Figma Make queda intacto fuera de esta carpeta (`/src`,
-> `package.json`, etc.). Todo lo nuevo vive aislado acá dentro de `vanilla/`.
+Proyecto Integrador · Diseño y Desarrollo Web · UADE.
 
 ## Estructura
 
 ```
-vanilla/
+huincul_linea_109/
 ├── index.html          Página principal (HTML semántico, un solo <h1>)
 ├── css/
-│   ├── tokens.css      Design System en :root (colores, tipografía, espaciados, radios, sombras)
-│   ├── base.css        Reset, tipografía base y utilidades
-│   └── styles.css      Layout y componentes (convención BEM, mobile-first)
+│   └── styles.css      Hoja de estilos única: tokens del Design System + base + componentes + responsive
 ├── js/
 │   └── main.js         Interacciones: tema, menú mobile, año, hora, paradas, horarios
 └── assets/
-    ├── img/
-    │   └── logo-huincul.png
-    └── icons/          (los iconos son SVG inline; carpeta reservada)
+    ├── img/            Imágenes (logo)
+    └── icons/          Carpeta reservada (los iconos son SVG inline)
 ```
 
 ## Cómo verlo
@@ -30,10 +26,10 @@ Abrir `index.html` directo en el navegador, o servirlo con un server estático:
 
 ```bash
 # Python
-python -m http.server 5500 --directory vanilla
+python -m http.server 5500
 
 # Node
-npx serve vanilla
+npx serve
 ```
 
 Luego abrir `http://localhost:5500`.
@@ -42,13 +38,25 @@ Luego abrir `http://localhost:5500`.
 
 - **Tema claro/oscuro** persistido en `localStorage` (sin parpadeo al cargar).
 - **Menú hamburguesa** en mobile con `aria-expanded`.
-- **Buscador de paradas** (filtra las 13 paradas por nombre o barrio).
+- **Buscador de paradas** (filtra las paradas por nombre o barrio).
 - **Selector de horarios** por dirección (ida/vuelta) y franja, con horas pico
-  destacadas. Datos simulados en JS.
+  destacadas.
 - **Año** y **hora de última actualización** dinámicos.
 - **Mapa** del recorrido embebido (uMap / OpenStreetMap).
 
+## Diseño y accesibilidad
+
+- Design System definido con variables CSS en `:root` (colores, tipografía,
+  espaciados, radios y sombras), reutilizadas en todo el sitio.
+- HTML semántico (`header`, `nav`, `main`, `section`, `footer`), jerarquía de
+  headings correcta y sin estilos inline.
+- Foco visible, textos alternativos en imágenes y `aria-label` donde corresponde.
+
 ## Responsive
 
-Mobile-first con breakpoints en **480px**, **768px** y **1024px**. Verificado sin
-scroll horizontal a 360/375px, 768px y 1280px.
+Mobile-first con breakpoints en **480px**, **768px** y **1024px**, sin scroll
+horizontal.
+
+## Despliegue
+
+Publicado con **GitHub Pages** desde la rama `main` (carpeta raíz).

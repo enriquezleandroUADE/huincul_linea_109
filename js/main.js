@@ -1,6 +1,6 @@
 /* ============================================================================
    main.js — Interacciones de la página principal (Línea 109)
-   Vanilla JS (ES6+), sin librerías. Cada interacción vive en su propio módulo.
+   JavaScript (ES6+), sin librerías. Cada interacción vive en su propio módulo.
    ============================================================================ */
 
 (function () {
