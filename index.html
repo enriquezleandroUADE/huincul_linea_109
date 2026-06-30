@@ -60,36 +60,8 @@
             id="theme-toggle"
             aria-label="Cambiar tema claro/oscuro"
           >
-            <!-- Luna (modo claro) -->
-            <svg
-              class="icon icon--md theme-toggle__moon"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M12 3a6.36 6.36 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
-            <!-- Sol (modo oscuro) -->
-            <svg
-              class="icon icon--md theme-toggle__sun"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2" />
-              <path d="M12 20v2" />
-              <path d="m4.93 4.93 1.41 1.41" />
-              <path d="m17.66 17.66 1.41 1.41" />
-              <path d="M2 12h2" />
-              <path d="M20 12h2" />
-              <path d="m6.34 17.66-1.41 1.41" />
-              <path d="m19.07 4.93-1.41 1.41" />
-            </svg>
+            <span class="icon icon--md icon--moon theme-toggle__moon" aria-hidden="true"></span>
+            <span class="icon icon--md icon--sun theme-toggle__sun" aria-hidden="true"></span>
           </button>
 
           <button
@@ -100,32 +72,12 @@
             aria-expanded="false"
             aria-controls="mobile-nav"
           >
-            <!-- Hamburguesa -->
-            <svg
-              class="icon menu-toggle__open"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-            <!-- Cerrar (oculto por defecto) -->
-            <svg
-              class="icon menu-toggle__close"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            <span class="icon icon--menu menu-toggle__open" aria-hidden="true"></span>
+            <span
+              class="icon icon--x menu-toggle__close"
               aria-hidden="true"
               style="display: none"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
+            ></span>
           </button>
         </div>
       </div>
@@ -159,17 +111,7 @@
           </p>
           <a class="btn btn--primary" href="#mapa">
             Ver mapa del recorrido
-            <svg
-              class="icon icon--md"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <span class="icon icon--md icon--arrow-right" aria-hidden="true"></span>
           </a>
         </div>
       </section>
@@ -219,17 +161,10 @@
           <div class="card estado__card">
             <div class="estado__status">
               <div class="estado__status-head">
-                <svg
-                  class="icon icon--xl estado__status-icon"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <span
+                  class="icon icon--xl icon--circle-check estado__status-icon"
                   aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
+                ></span>
                 <div>
                   <h3 class="estado__status-title">Operativo</h3>
                   <p class="estado__status-desc">
@@ -238,17 +173,7 @@
                 </div>
               </div>
               <div class="estado__updated">
-                <svg
-                  class="icon icon--sm"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
+                <span class="icon icon--sm icon--clock" aria-hidden="true"></span>
                 <span>Última actualización: <span id="estado-hora">—</span></span>
               </div>
             </div>
@@ -256,17 +181,10 @@
             <div>
               <h4 class="estado__alerts-title">Alertas e Incidentes</h4>
               <div class="estado__alert">
-                <svg
-                  class="icon icon--md estado__alert-icon"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <span
+                  class="icon icon--md icon--circle-check estado__alert-icon"
                   aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
+                ></span>
                 <div>
                   <div class="estado__alert-title">No hay incidentes reportados</div>
                   <div class="estado__alert-desc">
@@ -288,17 +206,10 @@
           </div>
 
           <div class="paradas__search">
-            <svg
-              class="icon icon--md paradas__search-icon"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            <span
+              class="icon icon--md icon--search paradas__search-icon"
               aria-hidden="true"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.3-4.3" />
-            </svg>
+            ></span>
             <input
               class="paradas__search-input"
               type="text"
@@ -336,17 +247,7 @@
                   type="button"
                   data-direccion="ida"
                 >
-                  <svg
-                    class="icon icon--sm"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
+                  <span class="icon icon--sm icon--arrow-right" aria-hidden="true"></span>
                   Ida (Retiro → Pompeya)
                 </button>
                 <button
@@ -354,17 +255,7 @@
                   type="button"
                   data-direccion="vuelta"
                 >
-                  <svg
-                    class="icon icon--sm"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="m12 19-7-7 7-7" />
-                    <path d="M19 12H5" />
-                  </svg>
+                  <span class="icon icon--sm icon--arrow-left" aria-hidden="true"></span>
                   Vuelta (Pompeya → Retiro)
                 </button>
               </div>
@@ -391,17 +282,10 @@
             </div>
 
             <div class="horarios__note">
-              <svg
-                class="icon icon--sm horarios__note-icon"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+              <span
+                class="icon icon--sm icon--clock horarios__note-icon"
                 aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
+              ></span>
               <span class="horarios__note-text">
                 Los horarios destacados indican horas pico con mayor frecuencia
               </span>
@@ -429,19 +313,7 @@
               <div>
                 <div class="tarifa__col-head">
                   <span class="tarifa__col-icon">
-                    <svg
-                      class="icon icon--md"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"
-                      />
-                      <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
-                    </svg>
+                    <span class="icon icon--md icon--wallet" aria-hidden="true"></span>
                   </span>
                   <h3 class="tarifa__col-title">Tarifa Vigente</h3>
                 </div>
@@ -465,17 +337,7 @@
               <div>
                 <div class="tarifa__col-head">
                   <span class="tarifa__col-icon">
-                    <svg
-                      class="icon icon--md"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect width="20" height="14" x="2" y="5" rx="2" />
-                      <line x1="2" x2="22" y1="10" y2="10" />
-                    </svg>
+                    <span class="icon icon--md icon--credit-card" aria-hidden="true"></span>
                   </span>
                   <h3 class="tarifa__col-title">Medios de Pago</h3>
                 </div>
@@ -489,17 +351,7 @@
                   </div>
                   <div class="tarifa__pay tarifa__pay--disabled">
                     <span class="tarifa__pay-badge tarifa__pay-badge--muted">
-                      <svg
-                        class="icon icon--md"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <rect width="20" height="14" x="2" y="5" rx="2" />
-                        <line x1="2" x2="22" y1="10" y2="10" />
-                      </svg>
+                      <span class="icon icon--md icon--credit-card" aria-hidden="true"></span>
                     </span>
                     <div>
                       <div class="tarifa__pay-title">Efectivo</div>
@@ -511,18 +363,10 @@
             </div>
 
             <div class="tarifa__note">
-              <svg
-                class="icon icon--md tarifa__note-icon"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+              <span
+                class="icon icon--md icon--info tarifa__note-icon"
                 aria-hidden="true"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
+              ></span>
               <div class="tarifa__note-body">
                 <p class="tarifa__note-title">Importante:</p>
                 <p class="tarifa__note-text">
@@ -547,17 +391,7 @@
           <div class="acc__grid">
             <article class="acc-card">
               <span class="acc-card__icon">
-                <svg
-                  class="icon icon--lg"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="m12 14 4-4" />
-                  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
-                </svg>
+                <span class="icon icon--lg icon--gauge" aria-hidden="true"></span>
               </span>
               <h3 class="acc-card__title">Vehículos de piso bajo</h3>
               <p class="acc-card__desc">
@@ -567,18 +401,7 @@
 
             <article class="acc-card">
               <span class="acc-card__icon">
-                <svg
-                  class="icon icon--lg"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                </svg>
+                <span class="icon icon--lg icon--volume-2" aria-hidden="true"></span>
               </span>
               <h3 class="acc-card__title">Anuncios de audio</h3>
               <p class="acc-card__desc">Información sonora de paradas y destinos</p>
@@ -586,21 +409,7 @@
 
             <article class="acc-card">
               <span class="acc-card__icon">
-                <svg
-                  class="icon icon--lg"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" />
-                  <path
-                    d="M3 11v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z"
-                  />
-                  <path d="M5 18v2" />
-                  <path d="M19 18v2" />
-                </svg>
+                <span class="icon icon--lg icon--armchair" aria-hidden="true"></span>
               </span>
               <h3 class="acc-card__title">Asientos preferenciales</h3>
               <p class="acc-card__desc">
@@ -611,20 +420,7 @@
 
             <article class="acc-card">
               <span class="acc-card__icon">
-                <svg
-                  class="icon icon--lg"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="16" cy="4" r="1" />
-                  <path d="m18 19 1-7-6 1" />
-                  <path d="m5 8 3-3 5.5 3-2.36 3.5" />
-                  <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
-                  <path d="M13.76 17.5a5 5 0 0 0-3.4-7.4" />
-                </svg>
+                <span class="icon icon--lg icon--accessibility" aria-hidden="true"></span>
               </span>
               <h3 class="acc-card__title">Acceso por rampa</h3>
               <p class="acc-card__desc">Rampas de acceso en todas las unidades</p>
@@ -632,19 +428,7 @@
 
             <article class="acc-card">
               <span class="acc-card__icon">
-                <svg
-                  class="icon icon--lg"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"
-                  />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
+                <span class="icon icon--lg icon--eye" aria-hidden="true"></span>
               </span>
               <h3 class="acc-card__title">Indicadores visuales</h3>
               <p class="acc-card__desc">Señalización clara y de alto contraste</p>
@@ -652,20 +436,10 @@
           </div>
 
           <div class="acc__commit">
-            <svg
-              class="icon icon--xl acc__commit-icon"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            <span
+              class="icon icon--xl icon--accessibility acc__commit-icon"
               aria-hidden="true"
-            >
-              <circle cx="16" cy="4" r="1" />
-              <path d="m18 19 1-7-6 1" />
-              <path d="m5 8 3-3 5.5 3-2.36 3.5" />
-              <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
-              <path d="M13.76 17.5a5 5 0 0 0-3.4-7.4" />
-            </svg>
+            ></span>
             <h3 class="acc__commit-title">Compromiso con la inclusión</h3>
             <p class="acc__commit-text">
               Trabajamos continuamente para mejorar la accesibilidad de nuestro
@@ -741,32 +515,17 @@
             <h2 class="footer__col-title">Contacto</h2>
             <ul class="footer__list">
               <li class="footer__contact-item">
-                <svg
-                  class="icon icon--sm footer__contact-icon"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <span
+                  class="icon icon--sm icon--phone footer__contact-icon"
                   aria-hidden="true"
-                >
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                  />
-                </svg>
+                ></span>
                 <a class="footer__link" href="tel:08009997823">0800-999-SUBE (7823)</a>
               </li>
               <li class="footer__contact-item">
-                <svg
-                  class="icon icon--sm footer__contact-icon"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <span
+                  class="icon icon--sm icon--mail footer__contact-icon"
                   aria-hidden="true"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
+                ></span>
                 <a class="footer__link" href="mailto:info@linea109.com.ar"
                   >info@linea109.com.ar</a
                 >
@@ -790,18 +549,7 @@
                 rel="noopener noreferrer"
                 aria-label="Facebook"
               >
-                <svg
-                  class="icon icon--md"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                  />
-                </svg>
+                <span class="icon icon--md icon--facebook" aria-hidden="true"></span>
               </a>
               <a
                 class="footer__social-link"
@@ -810,18 +558,7 @@
                 rel="noopener noreferrer"
                 aria-label="Twitter / X"
               >
-                <svg
-                  class="icon icon--md"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-                  />
-                </svg>
+                <span class="icon icon--md icon--twitter" aria-hidden="true"></span>
               </a>
               <a
                 class="footer__social-link"
@@ -830,18 +567,7 @@
                 rel="noopener noreferrer"
                 aria-label="Instagram"
               >
-                <svg
-                  class="icon icon--md"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
+                <span class="icon icon--md icon--instagram" aria-hidden="true"></span>
               </a>
             </div>
           </div>

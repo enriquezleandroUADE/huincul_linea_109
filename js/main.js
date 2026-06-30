@@ -7,12 +7,12 @@
   "use strict";
 
   /* --------------------------------------------------------------------------
-     Helpers SVG (iconos lucide reutilizados en contenido dinámico)
+     Iconos reutilizados en contenido dinámico (archivos en assets/icons via CSS)
      -------------------------------------------------------------------------- */
-  const SVG = {
-    pin: '<svg class="icon icon--md" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
+  const ICON = {
+    pin: '<span class="icon icon--md icon--map-pin" aria-hidden="true"></span>',
     externalLink:
-      '<svg class="icon icon--sm" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>',
+      '<span class="icon icon--sm icon--external-link" aria-hidden="true"></span>',
   };
 
   /* ==========================================================================
@@ -115,7 +115,7 @@
         '<article class="parada-card">' +
         '<div class="parada-card__head">' +
         '<span class="parada-card__pin">' +
-        SVG.pin +
+        ICON.pin +
         "</span>" +
         '<div class="parada-card__info">' +
         '<h3 class="parada-card__name">' +
@@ -127,7 +127,7 @@
         "</div>" +
         "</div>" +
         '<a class="parada-card__link" href="#mapa">Ver en mapa' +
-        SVG.externalLink +
+        ICON.externalLink +
         "</a>" +
         "</article>"
       );

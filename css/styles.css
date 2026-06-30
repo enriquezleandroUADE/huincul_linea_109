@@ -238,18 +238,54 @@ input:focus-visible {
   border: 0;
 }
 
-/* Iconos SVG inline (lucide): tamaño por defecto y herencia de color */
+/* ---- Iconos (archivos SVG en assets/icons via CSS mask) ----
+   El color del icono sale del contexto (background-color: currentColor),
+   así heredan el color del texto/sección igual que un SVG inline. */
 .icon {
+  display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
-  stroke: currentColor;
-  fill: none;
+  background-color: currentColor;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
+
+/* Tamaños */
 .icon--sm { width: 1rem; height: 1rem; }
 .icon--md { width: 1.25rem; height: 1.25rem; }
 .icon--lg { width: 1.75rem; height: 1.75rem; }
 .icon--xl { width: 3rem; height: 3rem; }
+
+/* Mapeo nombre → archivo (assets/icons) */
+.icon--moon          { -webkit-mask-image: url("../assets/icons/moon.svg");          mask-image: url("../assets/icons/moon.svg"); }
+.icon--sun           { -webkit-mask-image: url("../assets/icons/sun.svg");           mask-image: url("../assets/icons/sun.svg"); }
+.icon--menu          { -webkit-mask-image: url("../assets/icons/menu.svg");          mask-image: url("../assets/icons/menu.svg"); }
+.icon--x             { -webkit-mask-image: url("../assets/icons/x.svg");             mask-image: url("../assets/icons/x.svg"); }
+.icon--arrow-right   { -webkit-mask-image: url("../assets/icons/arrow-right.svg");   mask-image: url("../assets/icons/arrow-right.svg"); }
+.icon--arrow-left    { -webkit-mask-image: url("../assets/icons/arrow-left.svg");    mask-image: url("../assets/icons/arrow-left.svg"); }
+.icon--circle-check  { -webkit-mask-image: url("../assets/icons/circle-check.svg");  mask-image: url("../assets/icons/circle-check.svg"); }
+.icon--clock         { -webkit-mask-image: url("../assets/icons/clock.svg");         mask-image: url("../assets/icons/clock.svg"); }
+.icon--search        { -webkit-mask-image: url("../assets/icons/search.svg");        mask-image: url("../assets/icons/search.svg"); }
+.icon--wallet        { -webkit-mask-image: url("../assets/icons/wallet.svg");        mask-image: url("../assets/icons/wallet.svg"); }
+.icon--credit-card   { -webkit-mask-image: url("../assets/icons/credit-card.svg");   mask-image: url("../assets/icons/credit-card.svg"); }
+.icon--info          { -webkit-mask-image: url("../assets/icons/info.svg");          mask-image: url("../assets/icons/info.svg"); }
+.icon--gauge         { -webkit-mask-image: url("../assets/icons/gauge.svg");         mask-image: url("../assets/icons/gauge.svg"); }
+.icon--volume-2      { -webkit-mask-image: url("../assets/icons/volume-2.svg");      mask-image: url("../assets/icons/volume-2.svg"); }
+.icon--armchair      { -webkit-mask-image: url("../assets/icons/armchair.svg");      mask-image: url("../assets/icons/armchair.svg"); }
+.icon--accessibility { -webkit-mask-image: url("../assets/icons/accessibility.svg"); mask-image: url("../assets/icons/accessibility.svg"); }
+.icon--eye           { -webkit-mask-image: url("../assets/icons/eye.svg");           mask-image: url("../assets/icons/eye.svg"); }
+.icon--phone         { -webkit-mask-image: url("../assets/icons/phone.svg");         mask-image: url("../assets/icons/phone.svg"); }
+.icon--mail          { -webkit-mask-image: url("../assets/icons/mail.svg");          mask-image: url("../assets/icons/mail.svg"); }
+.icon--facebook      { -webkit-mask-image: url("../assets/icons/facebook.svg");      mask-image: url("../assets/icons/facebook.svg"); }
+.icon--twitter       { -webkit-mask-image: url("../assets/icons/twitter.svg");       mask-image: url("../assets/icons/twitter.svg"); }
+.icon--instagram     { -webkit-mask-image: url("../assets/icons/instagram.svg");     mask-image: url("../assets/icons/instagram.svg"); }
+.icon--map-pin       { -webkit-mask-image: url("../assets/icons/map-pin.svg");       mask-image: url("../assets/icons/map-pin.svg"); }
+.icon--external-link { -webkit-mask-image: url("../assets/icons/external-link.svg"); mask-image: url("../assets/icons/external-link.svg"); }
 
 /* Respeta la preferencia de movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
